@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'js-codereview3',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://nahoo-answers.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
