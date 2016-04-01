@@ -47,9 +47,15 @@ body {
 
 #footer-wrapper {
   height:30px;
+  margin-top: 200px;
 }
 
 .authorDate {
   font-size: 11px;
   color: #8B9094;
+}
+
+.copyright {
+  font-size: 10px;
+  bottom: 0px;
 }

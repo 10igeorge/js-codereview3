@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   newQuestion: false,
   actions: {
     showQuestionForm(){
+      this.set('title', '');
+      this.set('author', '');
+      this.set('details', '');
       this.set('newQuestion', true);
     },
     submitQuestion(){
