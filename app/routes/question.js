@@ -26,7 +26,6 @@ export default Ember.Route.extend({
       this.transitionTo('/question/'+question.id);
     },
     deleteQuestion(question){
-      console.log(question);
       if(confirm("Delete this question?")){
         var answer_deletions = question.get('answers').map(function(answer){
           return answer.destroyRecord();
@@ -41,6 +40,14 @@ export default Ember.Route.extend({
       if(confirm("Delete answer?")){
         answer.destroyRecord();
       }
-    }
+    },
+    upvoteAnswer(answer){
+      var votes = answer.get('upvotes');
+      answer.set('upvotes', votes + 1);
+    },
+    downvoteAnswer(answer){
+      var votes = answer.get('upvotes');
+      answer.set('upvotes', votes - 1);
+    },
   }
 });

@@ -15,7 +15,8 @@ export default Ember.Component.extend({
         name: this.get('name'),
         question: this.get('question'),
         date: date,
-        body: this.get('body')
+        body: this.get('body'),
+        upvotes: 0
       };
       this.set('newAnswerForm', false);
       this.sendAction('submitAnswer', params);
