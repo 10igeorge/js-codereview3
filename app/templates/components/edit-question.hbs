@@ -1,4 +1,4 @@
-{{#if editQuestion}}
+{{#if newEditQuestionForm}}
   <h1>Edit Question</h1>
     <div>
       <form>
@@ -29,7 +29,7 @@
           <label for="details">More Information:</label><br>
           {{textarea value=details id="details" rows="10" cols="50" placeholder=question.details}}
         </div>
-        <button class="btn btn-primary"{{action 'editQuestion'}}>Submit</button>
+        <button class="btn btn-primary"{{action 'editQuestion' question}}>Submit</button>
       </form>
     </div>
 {{else}}
