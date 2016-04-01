@@ -6,7 +6,7 @@
 {{model.details}}
 <hr>
 {{edit-question question=model editQuestion="editQuestion"}}
-<button id="delete" class="btn btn-danger btn-xs">Delete</button><br><br><hr>
+<button id="delete" class="btn btn-danger btn-xs" {{action 'deleteQuestion' model}}>Delete</button><br><br><hr>
 
 {{new-answer submitAnswer="submitAnswer" question=model}}
 <br><br>
