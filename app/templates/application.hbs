@@ -1,7 +1,8 @@
-<div class="container">
+
+<div class="wrapper">
   <header>
     <div class="jumbotron">
-      {{#link-to 'index'}}Nahoo Answers{{/link-to}}
+      {{#link-to 'index'}}<img class="header" src="/assets/images/qanda.jpg">{{/link-to}}
     </div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -18,7 +19,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav navbar-right">
-            <li class="active">{{#link-to 'about'}}About<span class="sr-only">(current)</span>{{/link-to}}</li>
+            <li>{{#link-to 'about'}}About<span class="sr-only">(current)</span>{{/link-to}}</li>
             <li>{{#link-to 'contact'}}Contact Us{{/link-to}}</li>
             {{#bs-dropdown tagName="li"}}
               {{#bs-dropdown-toggle}}Categories<span class="caret"></span>{{/bs-dropdown-toggle}}
@@ -38,10 +39,12 @@
       </div>
     </nav>
   </header>
-    {{outlet}}
-  <footer id="footer-wrapper">
-    <div class="copyright">
-      &copy; 2016 Izzy George
-    </div>
-  </footer>
+  <div class="container">
+      {{outlet}}
+    <footer id="footer-wrapper">
+      <div class="copyright">
+        &copy; 2016 Izzy George
+      </div>
+    </footer>
+  </div>
 </div>
