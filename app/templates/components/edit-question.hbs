@@ -29,9 +29,9 @@
           <label for="details">More Information:</label><br>
           {{textarea value=details id="details" rows="10" cols="50" placeholder=question.details}}
         </div>
-        <button class="btn btn-primary"{{action 'editQuestion' question}}>Submit</button>
+        <button id="editQuestion" class="btn btn-primary btn-xs" {{action 'editQuestion' question}}>Submit</button>
       </form>
     </div>
 {{else}}
-    <button class="btn btn-primary" {{action 'editQuestionForm'}}>Edit Question</button>
+    <button id="editQuestion" class="btn btn-info btn-xs" {{action 'editQuestionForm'}}>Edit</button>
 {{/if}}
