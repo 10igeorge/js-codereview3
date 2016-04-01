@@ -1,0 +1,8 @@
+<h1>{{model.questions.title}}</h1>
+
+<h5>By: {{model.questions.author}}</h5>
+<p>Created: {{model.questions.date}}</p><br><br>
+<p>Tag: {{model.questions.tag}}</p>
+{{model.questions.details}}
+<hr>
+{{edit-question editQuestionForm="editQuestionForm"}}
