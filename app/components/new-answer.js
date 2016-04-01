@@ -4,6 +4,8 @@ export default Ember.Component.extend({
   newAnswerForm: false,
   actions: {
     showAnswerForm(){
+      this.set('name', '');
+      this.set('body', '');
       this.set('newAnswerForm', true);
     },
     submitAnswer(){
