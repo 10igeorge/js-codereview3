@@ -16,7 +16,9 @@ export default Ember.Component.extend({
         tag: this.get('tag'),
         details: this.get('details'),
         preview: this.get('details').substring(0,100),
-      }
+      };
+      this.set('newQuestion', false);
+      this.sendAction('submitQuestion', params);
     }
   }
 });
