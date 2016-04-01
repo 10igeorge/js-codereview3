@@ -1,0 +1,8 @@
+<h3>Miscellaneous</h3>
+
+{{#each model as |question|}}
+  {{#if (searchTags question 'misc')}}
+    {{question-tile question=question}}
+    <hr>
+  {{/if}}
+{{/each}}

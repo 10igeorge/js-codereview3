@@ -1,0 +1,8 @@
+<h3>Sports</h3>
+
+{{#each model as |question|}}
+  {{#if (searchTags question 'sports')}}
+    {{question-tile question=question}}
+    <hr>
+  {{/if}}
+{{/each}}

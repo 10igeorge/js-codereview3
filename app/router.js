@@ -9,6 +9,14 @@ Router.map(function() {
   this.route('question', {path: '/question/:question_id'});
   this.route('about');
   this.route('contact');
+  this.route('psychology');
+  this.route('entertainment');
+  this.route('politics');
+  this.route('sports');
+  this.route('health');
+  this.route('science');
+  this.route('beauty');
+  this.route('misc');
 });
 
 export default Router;
