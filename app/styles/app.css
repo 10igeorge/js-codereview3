@@ -1,9 +1,15 @@
+body, html {
+  height: 100%;
+}
+
 #edit, #delete, #reply {
-  float: left;
+  float: right;
 }
 
 .container{
   padding: 30px;
+  width: 800px;
+    bottom: 0px;
 }
 
 .header {
@@ -18,7 +24,6 @@
 
 .wrapper{
   align: top;
-  height: auto;
   position: relative;
   width: 800px;
   margin: 0 auto;
@@ -26,7 +31,8 @@
   box-shadow: 0px 0px 19px rgba(26, 26, 26, 0.1);
   -moz-box-shadow: 0px 0px 19px rgba(26, 26, 26, 0.1);
   -webkit-box-shadow: 0px 0px 19px rgba(26, 26, 26, 0.1);
-  min-height: 100%;
+  bottom: 0px;
+  height: inherit;
 }
 
 body {
@@ -39,20 +45,13 @@ body {
   font-size: 42px;
 }
 
-
-#submitNewComment {
-  margin-bottom: 20px;
-  margin-top: 50px;
-}
-
 #footer-wrapper {
-  margin-top: 100px;
+  position:fixed;
+  bottom:0px;
+  height:30px;
 }
 
-.listPosts {
-  width: 300px;
-}
-
-#listPostTitle {
-  float:left;
+.authorDate {
+  font-size: 11px;
+  color: #8B9094;
 }
