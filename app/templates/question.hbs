@@ -9,3 +9,10 @@
 <button id="deleteQuestion" class="btn btn-danger btn-xs">Delete</button><br><br><hr>
 
 {{new-answer submitAnswer="submitAnswer" question=model}}
+<br><br>
+
+{{#each model.answers as |answer|}}
+  {{answer-tile answer=answer}}
+  <button class="btn btn-info btn-xs">Reply</button>
+  <button class="btn btn-danger btn-xs">Delete</button>
+{{/each}}
