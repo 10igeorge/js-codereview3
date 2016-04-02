@@ -1,7 +1,8 @@
 # Js-codereview3
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+### Isabelle George
+
+This Q&A app features Ember 2.0 in JavaScript for Epicodus. It allows users to post questions and to answer other questions. You can search by tags, edit and delete questions or answers, and upvote or downvote each answer.
 
 ## Prerequisites
 
@@ -51,3 +52,4 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+#### Copyright 2016 Isabelle George
