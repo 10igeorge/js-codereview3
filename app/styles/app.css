@@ -70,8 +70,9 @@ body {
   opacity: 0.4;
 }
 
-#downvote:hover, #upvote:hover{
+#downvote:hover, #upvote:hover {
   cursor: pointer;
+  opacity: .7;
 }
 
 .totalAnswers {
