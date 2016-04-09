@@ -85,6 +85,11 @@ body {
   float: left;
 }
 
+.saveButton:hover {
+  cursor: pointer;
+  color: #DAB72A;
+}
+
 .saveText {
   font-size: 11px;
   color: #8B9094;
