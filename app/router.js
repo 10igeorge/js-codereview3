@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('science');
   this.route('beauty');
   this.route('misc');
+  this.route('dashboard');
 });
 
 export default Router;
