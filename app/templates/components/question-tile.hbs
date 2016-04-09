@@ -1,7 +1,8 @@
 {{#if isAnswered}}
   <img id="check" src="/assets/images/check.png">
 {{/if}}
-{{log isAnswered}}
+
+<span class="totalAnswers">Answers: {{totalAnswers}}</span>
 <h4>{{question.title}}</h4>
 <span class="authorDate"><p>Submitted by {{question.author}} on {{question.date}}</p></span>
 {{question.preview}}... {{#link-to 'question' question.id}}show more{{/link-to}}

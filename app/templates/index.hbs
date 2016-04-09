@@ -1,5 +1,7 @@
 {{new-question submitQuestion="submitQuestion"}}<br>
 <h2>Recent Questions</h2><br>
+{{log totalAnswers}}
+
   {{#each model as |question|}}
     {{question-tile question=question}}
     <hr>

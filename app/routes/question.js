@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   },
   actions: {
     editQuestion(question, params){
-      console.log(question);
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           question.set(key, params[key]);
@@ -19,7 +18,6 @@ export default Ember.Route.extend({
     submitAnswer(params){
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
-      console.log(params);
       question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function(){
         return question.save();

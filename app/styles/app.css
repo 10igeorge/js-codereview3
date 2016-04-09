@@ -74,6 +74,12 @@ body {
   cursor: pointer;
 }
 
+.totalAnswers {
+  float: right;
+  font-size: 11px;
+  color: #8B9094;
+}
+
 .saveButton {
   font-size: 20px;
   float: left;
