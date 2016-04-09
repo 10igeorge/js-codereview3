@@ -52,6 +52,6 @@ export default Ember.Route.extend({
     },
     saveQuestion(question){
       this.get('savedQuestions').save(question);
-    }
+    },
   }
 });

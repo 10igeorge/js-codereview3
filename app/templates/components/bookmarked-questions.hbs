@@ -1,3 +1,6 @@
+
+
 {{#each savedQuestions.questions as |question|}}
   <p>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</p>
+  <button id="delete" class="btn btn-danger btn-xs" {{action 'remove' question}}>Delete</button>
 {{/each}}

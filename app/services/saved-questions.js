@@ -6,4 +6,7 @@ export default Ember.Service.extend({
   save(question){
     this.get('questions').pushObject(question);
   },
+  remove(question) {
+    this.get('questions').removeObject(question);
+  }
 });
