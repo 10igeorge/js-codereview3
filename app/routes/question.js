@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  savedQuestions: Ember.inject.service(),
   model(params){
     return this.store.findRecord('question', params.question_id);
   },
@@ -49,5 +50,8 @@ export default Ember.Route.extend({
       var votes = answer.get('upvotes');
       answer.set('upvotes', votes - 1);
     },
+    saveQuestion(question){
+      this.get('savedQuestions').save(question);
+    }
   }
 });

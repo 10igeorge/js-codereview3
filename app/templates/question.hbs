@@ -1,11 +1,13 @@
 <h1>{{model.title}}</h1>
 
 <h5>By: {{model.author}}</h5>
+
 <span class="authorDate"><p>Created: {{model.date}}</p></span>
 <span class="authorDate"><p>Tag: {{#link-to model.tag}}{{model.tag}}{{/link-to}}</p></span>
 {{model.details}}
 
 <br><br>
+<span class="saveButton" {{action 'saveQuestion' model}}>&bigstar; <span class="saveText">Save</span></span>
 <button id="delete" class="btn btn-danger btn-xs" {{action 'deleteQuestion' model}}>Delete</button>
 {{edit-question question=model editQuestion="editQuestion"}}
 <br><br><hr>
@@ -14,14 +16,18 @@
 
 <h3>Answers</h3>
 
-{{#each model.answers as |answer|}}
-  {{answer-tile questionId=answer.question.id answer=answer}}
+{{#if model.answers}}
+  {{#each model.answers as |answer|}}
+    {{answer-tile questionId=answer.question.id answer=answer}}
 
-  <img {{action 'upvoteAnswer' answer}} id="upvote" src="/assets/images/upvote.jpg">
-  <img {{action 'downvoteAnswer' answer}} id="downvote" src="/assets/images/downvote.jpg">
+    <img {{action 'upvoteAnswer' answer}} id="upvote" src="/assets/images/upvote.jpg">
+    <img {{action 'downvoteAnswer' answer}} id="downvote" src="/assets/images/downvote.jpg">
 
-  <button id="delete" class="btn btn-danger btn-xs" {{action 'deleteAnswer' answer}}>Delete</button>
-  <button id="reply" class="btn btn-primary btn-xs">Reply</button>
-<br><hr>
-{{/each}}
+    <button id="delete" class="btn btn-danger btn-xs" {{action 'deleteAnswer' answer}}>Delete</button>
+    <button id="reply" class="btn btn-primary btn-xs">Reply</button>
+  <br><hr>
+  {{/each}}
+{{else}}
+  <p>This question hasn't been answered yet.</p>
+{{/if}}
 {{new-answer submitAnswer="submitAnswer" question=model}}<br>
