@@ -11,6 +11,10 @@ body, html {
   float:left;
 }
 
+.answered {
+  float:right;
+}
+
 .container{
   padding: 30px;
   width: 800px;

@@ -7,5 +7,6 @@ export default DS.Model.extend({
   tag: DS.attr(),
   preview: DS.attr(),
   details: DS.attr(),
+  answered: DS.attr(),
   answers: DS.hasMany('answer', {async:true})
 });

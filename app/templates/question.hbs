@@ -2,6 +2,8 @@
 
 <h5>By: {{model.author}}</h5>
 
+<button class="answered btn btn-warning btn-xs" {{action 'answered' model}}>Click to mark as answered</button>
+
 <span class="authorDate"><p>Created: {{model.date}}</p></span>
 <span class="authorDate"><p>Tag: {{#link-to model.tag}}{{model.tag}}{{/link-to}}</p></span>
 {{model.details}}
