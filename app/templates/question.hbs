@@ -12,8 +12,6 @@
 {{edit-question question=model editQuestion="editQuestion"}}
 <br><br><hr>
 
-
-
 <h3>Answers</h3>
 
 {{#if model.answers}}
@@ -31,3 +29,7 @@
   <p>This question hasn't been answered yet.</p>
 {{/if}}
 {{new-answer submitAnswer="submitAnswer" question=model}}<br>
+
+{{#if bestAnswer}}
+best
+{{/if}}
