@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('question');
+    return this.store.query ('question', {
+      orderBy: 'answered',
+    });
   },
+
 
   actions: {
     submitQuestion(params){

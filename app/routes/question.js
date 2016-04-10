@@ -56,6 +56,7 @@ export default Ember.Route.extend({
     answered(question){
       question.get('answered');
       question.set('answered', true);
+      question.save();
     }
   }
 });
