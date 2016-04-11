@@ -6,8 +6,6 @@ export default Ember.Route.extend({
       orderBy: 'answered',
     });
   },
-
-
   actions: {
     submitQuestion(params){
       var newQuestion = this.store.createRecord('question', params);

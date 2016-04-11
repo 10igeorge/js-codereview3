@@ -17,7 +17,12 @@
 <h3>Answers</h3>
 
 {{#if model.answers}}
+{{bestAnswer model.answers}}
   {{#each model.answers as |answer|}}
+  <!-- helper -->
+
+
+    <!-- how to loop through each one before giving best answer -->
     {{answer-tile questionId=answer.question.id answer=answer}}
 
     <img {{action 'upvoteAnswer' answer}} id="upvote" src="/assets/images/upvote.jpg">
@@ -26,12 +31,9 @@
     <button id="delete" class="btn btn-danger btn-xs" {{action 'deleteAnswer' answer}}>Delete</button>
     <button id="reply" class="btn btn-primary btn-xs">Reply</button>
   <br><hr>
+
   {{/each}}
 {{else}}
   <p>This question hasn't been answered yet.</p>
 {{/if}}
 {{new-answer submitAnswer="submitAnswer" question=model}}<br>
-
-{{#if bestAnswer}}
-best
-{{/if}}
