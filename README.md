@@ -4,6 +4,8 @@
 
 This Q&A app features Ember 2.0 in JavaScript for Epicodus. It allows users to post questions and to answer other questions. You can search by tags, edit and delete questions or answers, and upvote or downvote each answer.
 
+With the update, each question may now be marked as answered, triggering a check mark for the home page display, and users may now save questions to view later.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
