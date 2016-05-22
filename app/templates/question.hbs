@@ -17,10 +17,17 @@
 <h3>Answers</h3>
 
 {{#if model.answers}}
-{{bestAnswer model.answers}}
+
+
+
+<!--
+{{#if (bestAnswer model.answers)}}
+
+  bes{{/if}} -->
   {{#each model.answers as |answer|}}
   <!-- helper -->
-
+  {{#if (bestAnswer answer.upvotes)}}
+  best{{/if}}
 
     <!-- how to loop through each one before giving best answer -->
     {{answer-tile questionId=answer.question.id answer=answer}}

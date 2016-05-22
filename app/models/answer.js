@@ -5,5 +5,6 @@ export default DS.Model.extend({
   body: DS.attr(),
   name: DS.attr(),
   date: DS.attr(),
-  upvotes: DS.attr()
+  upvotes: DS.attr(),
+  best: DS.attr()
 });
